@@ -4,9 +4,20 @@ pipeline {
     //    maven 'M3'
     //}
     stages {
-        stage ('Hello from github') {
+        stage ('checkout') {
           steps {
-            echo 'hello world'
+            git 'https://github.com/salvoj/helloJenkins.git'
+          }
+        }
+		stage ('build') {
+          steps {
+            sh 'mvn clean compile'
+          }
+        }
+		stage ('Test') {
+          steps {
+            sh 'mvn test'
+			junit '**/target/surefire-reports/TEST-*.xml
           }
         }
     }
