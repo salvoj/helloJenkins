@@ -8,7 +8,7 @@ pipeline {
       //    steps {
       //      git 'https://github.com/salvoj/helloJenkins.git'
       //    }
-        }
+      //  }
 		stage ('build') {
           steps {
             sh 'mvn clean compile'
