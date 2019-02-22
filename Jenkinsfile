@@ -1,13 +1,13 @@
 pipeline {
-    agent { label 'master' }
+    //agent { label 'master' }
     //tools {
     //    maven 'M3'
     //}
     stages {
-        stage ('checkout') {
-          steps {
-            git 'https://github.com/salvoj/helloJenkins.git'
-          }
+      //  stage ('checkout') {
+      //    steps {
+      //      git 'https://github.com/salvoj/helloJenkins.git'
+      //    }
         }
 		stage ('build') {
           steps {
